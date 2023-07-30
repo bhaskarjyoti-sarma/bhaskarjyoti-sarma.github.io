@@ -195,6 +195,10 @@
                 </div>
             </div>
         </div>
+
+
+	<p>Number of visitors: <span id="visitor-count"></span></p>
+	    
     </footer>
 
     <!-- jQuery -->
@@ -207,8 +211,18 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-    <!-- Theme JavaScript -->
+    
     <script src="js/clean-blog.min.js"></script>
+
+     <!-- Fetch and display visitor count using JavaScript -->
+   <script>
+        fetch('visitor_counter.php')
+            .then(response => response.text())
+            .then(count => {
+                document.getElementById('visitor-count').textContent = count;
+            })
+            .catch(error => console.error('Error fetching visitor count:', error));
+    </script>
 
 </body>
 
