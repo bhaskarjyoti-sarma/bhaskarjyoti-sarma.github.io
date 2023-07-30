@@ -404,10 +404,9 @@ img::-moz-selection {
 }
 body {
   -webkit-tap-highlight-color: #0085A1;
-}
 .bio-info {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
 }
 
 .bio-photo {
@@ -417,17 +416,35 @@ body {
 }
 
 .bio-text {
-  flex: 1; /* Allow the text to take up remaining space */
+  flex: 1;
 }
 
 .career-highlights {
-  list-style-type: disc; /* Use normal bullet points */
-  padding-left: 20px; /* Add some indentation to the list */
-  margin-top: 0; /* Remove default margin */
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0;
 }
 
 .career-highlights li {
   margin-bottom: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .bio-info {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .bio-photo {
+    max-width: 150px; /* Reduce image size for mobile */
+    margin-right: 0; /* Remove right margin for better spacing */
+    margin-bottom: 15px; /* Add some spacing between image and text */
+  }
+
+  .bio-text {
+    width: 100%; /* Full width for the text content */
+  }
 }
 
 
