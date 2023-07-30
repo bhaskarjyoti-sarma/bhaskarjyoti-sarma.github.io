@@ -195,9 +195,6 @@
                 </div>
             </div>
         </div>
-
-
-	<p>Number of visitors: <span id="visitor-count"></span></p>
 	    
     </footer>
 
@@ -214,25 +211,6 @@
     
     <script src="js/clean-blog.min.js"></script>
 
-     <!-- Fetch and display visitor count using JavaScript -->
-   <script>
-        function displayVisitorCount() {
-        fetch('visitor_counter.php')
-            .then(response => response.text())
-            .then(count => {
-                const counterElement = document.getElementById('visitor-count');
-                if (counterElement) {
-                    counterElement.textContent = count;
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching visitor count:', error);
-            });
-    }
-
-    // Call the function to display the visitor count
-    displayVisitorCount();
-    </script>
 
 </body>
 
